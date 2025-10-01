@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
+
+import HelloFromBackend from './HelloFromBackend.vue'
+
 defineProps({
   msg: String,
 })
+
 
 const count = ref(0)
 </script>
@@ -12,6 +16,7 @@ const count = ref(0)
   <h1>{{ msg }}</h1>
 
   <div class="card">
+    <HelloFromBackend />
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
