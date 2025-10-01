@@ -22,9 +22,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include('api.urls')),   # endpoints de ton app
-]
-
-# catch-all qui renvoie index.html (permet au router Vue d'afficher la page)
-urlpatterns += [
-    re_path(r'^(?:.*)/?$', TemplateView.as_view(template_name="index.html")),
+    path("", TemplateView.as_view(template_name="index.html")),
 ]

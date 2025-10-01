@@ -1,5 +1,9 @@
-# Python
-venv/
+# Vite build output
+frontend/dist/
+
+# Virtual env / uv cache
+.venv/
+.uv/
 __pycache__/
 *.pyc
 
@@ -17,3 +21,4 @@ node_modules/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+backend/staticfiles/
