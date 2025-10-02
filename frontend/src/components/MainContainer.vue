@@ -1,6 +1,7 @@
 <script setup>
     
     import NavBar from './common/NavBar.vue';
+    import HelloFromBackend from './HelloFromBackend.vue';
 
 </script>
 
