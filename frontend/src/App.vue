@@ -1,10 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import MainContainer from './components/MainContainer.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
   <MainContainer/>
+  <RouterView/>
 </template>
 
 <style scoped>

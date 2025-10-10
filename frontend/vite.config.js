@@ -19,9 +19,10 @@ export default defineConfig({
 
   build: {
     outDir: 'dist',   // default
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    manifest: true, // ✅ utile pour Django
   },
 
-  base: "/static/",   // 🔥 assets seront demandés depuis /static/
+  base: "/",   // 🔥 assets seront demandés depuis /static/
   
 })
