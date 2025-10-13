@@ -12,8 +12,9 @@ export default defineConfig({
 
   server: {
     port: 5173,
+    host: true,  // 🔥 écoute sur 0.0.0.0
     proxy: {
-      '/api': 'http://127.0.0.1:8000',
+      '/api': 'http://django-backend:8000',
     }
   },
 
@@ -23,6 +24,6 @@ export default defineConfig({
     manifest: true, // ✅ utile pour Django
   },
 
-  base: "/",   // 🔥 assets seront demandés depuis /static/
+  base: "/", // normal, puisque le front est servi par Vite ou Nginx
   
 })

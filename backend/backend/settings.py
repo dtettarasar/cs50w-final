@@ -15,10 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Templates: pointer vers frontend/dist (index.html)
-FRONTEND_DIST = BASE_DIR.parent / "frontend" / "dist"
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -28,7 +24,7 @@ SECRET_KEY = "django-insecure-)4!75nhy)&4^lfekt4crtww4xs3fcbozs#-cedlb5022-hhpsq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django-backend"] 
 
 
 # Application definition
@@ -60,8 +56,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [FRONTEND_DIST], # index.html généré par Vite
-        "APP_DIRS": False,
+        "APP_DIRS": True,  # on remet True sinon l’admin plante
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.request",
@@ -121,10 +116,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "/static/"
-
-STATICFILES_DIRS = [
-    BASE_DIR.parent / "frontend" / "dist",
-]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # pour collectstatic en prod
 

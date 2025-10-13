@@ -5,7 +5,13 @@ frontend/dist/
 .venv/
 .uv/
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables / secrets
+*.env
+.env.*
 
 # Node
 node_modules/
@@ -15,6 +21,15 @@ node_modules/
 
 # Optional build
 /frontend/dist/
+/frontend/.vite/
+/frontend/.cache/
+
+
+# Optional local dev files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Django stuff:
 *.log
@@ -22,3 +37,47 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 backend/staticfiles/
+*.pot
+*.mo
+
+# Docker Compose override files
+docker-compose.override.yml
+
+# Docker temp / build files
+**/tmp/
+**/.dockerignore
+**/Dockerfile.*
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+.nfs*
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# Log files
+*.log
+*.out
+
+# Coverage / test reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# PyInstaller
+dist/
+build/
